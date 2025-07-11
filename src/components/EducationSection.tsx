@@ -3,44 +3,39 @@ import { Card, CardContent } from '@/components/ui/card';
 const EducationSection = () => {
   const education = [
     {
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'University of Technology',
-      period: '2015 - 2019',
-      gpa: '3.8/4.0',
-      description: 'Focused on software engineering, algorithms, and data structures. Graduated Magna Cum Laude.',
-      highlights: [
-        'Dean\'s List for 6 consecutive semesters',
-        'President of Computer Science Student Association',
-        'Winner of Annual Hackathon Competition 2018'
-      ]
+      degree: 'Bachelor of Science in Artificial Intelligence and Data Science',
+      institution: 'Annamacharya Tnstitute of Technology and Sciences, Tirupati',
+      period: '2022 - 2026',
+      gpa: '7.3/10',
+      description: 'Focused on Data Analytics,Excel,Power BI',
+      
     }
   ];
 
   const certifications = [
     {
-      name: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
+      name: 'HTML Training',
+      issuer: 'Spoken Tutorial Project at IIT Bombay',
       date: '2023',
-      credentialId: 'AWS-SAA-C03-2023'
+      credentialId: '3480823U4G'
     },
     {
-      name: 'React Developer Certification',
-      issuer: 'Meta',
-      date: '2022',
-      credentialId: 'META-RDC-2022'
+      name: 'C Training',
+      issuer: 'Spoken Tutorial Project at IIT Bombay',
+      date: '2023',
+      credentialId: '34808234N4'
     },
     {
-      name: 'Google Cloud Professional Developer',
-      issuer: 'Google Cloud',
-      date: '2022',
-      credentialId: 'GCP-PD-2022'
+      name: 'AWS Cloud Practitioner Exam',
+      issuer: 'Geeks for Geeks ',
+      date: '2024'
     },
-    {
+    {/*
       name: 'MongoDB Certified Developer',
       issuer: 'MongoDB University',
       date: '2021',
       credentialId: 'MDB-DEV-2021'
-    }
+    */}
   ];
 
   return (
