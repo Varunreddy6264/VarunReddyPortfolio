@@ -55,7 +55,7 @@ const AboutSection = () => {
               </div>
               
               {/* Floating badges */}
-             <div className="absolute -top-6 -left-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium shadow-medium animate-float"> 
+             <div className="absolute -top-3 -right-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium shadow-medium animate-float"> 
                  Creativity
               </div> 
               <div className="absolute -bottom-3 -left-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium shadow-medium animate-float" style={{animationDelay: '1s'}}>
