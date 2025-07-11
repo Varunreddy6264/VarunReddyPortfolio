@@ -33,7 +33,7 @@ const EducationSection = () => {
       name: 'AWS Cloud Practitioner Exam',
       issuer: 'Geeks for Geeks',
       date: '2024',
-      credentialID: 'bd7ed4b2f19f2090a5cfe0cdbdf1825c'
+      credentialId: 'bd7ed4b2f19f2090a5cfe0cdbdf1825c'
     },
     {
       name: 'Data Analytics Intern',
