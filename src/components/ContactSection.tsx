@@ -46,7 +46,7 @@ const ContactSection = () => {
       ),
       label: 'Email',
       value: 'varunreddy7456@gmail.com',
-      link: 'mailto:alex.johnson@gmail.com'
+      link: 'mailto:varunreddy7456@gmail.com'
     },
     {
       icon: (
@@ -56,7 +56,7 @@ const ContactSection = () => {
         </svg>
       ),
       label: 'Location',
-      value: 'Kadapa, AP',
+      value: 'Kadapa, Andhra Pradesh',
       link: null
     },
     {
@@ -66,7 +66,7 @@ const ContactSection = () => {
         </svg>
       ),
       label: 'LinkedIn',
-      value: 'linkedin.com/in/chilamkuru-varun-kumar-reddy',
+      value: 'linkedin.com',
       link: 'https://www.linkedin.com/in/chilamkuru-varun-kumar-reddy-600802371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
     },
     {
@@ -76,7 +76,7 @@ const ContactSection = () => {
         </svg>
       ),
       label: 'GitHub',
-      value: 'github.com/Varunreddy6264',
+      value: 'github.com',
       link: 'https://github.com/Varunreddy6264'
     }
   ];
