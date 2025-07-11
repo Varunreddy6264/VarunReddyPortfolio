@@ -43,7 +43,7 @@ const AboutSection = () => {
               <div className="w-80 h-80 rounded-full gradient-primary p-1 shadow-strong">
                 <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
                  <img 
-                   src="/IMG_20231204_075604_725.jpg" 
+                   src="/Public/IMG_20231204_075604_725.jpg" 
                    alt="My Profile"
                    className="w-full h-full object-cover rounded-full"
                  />
