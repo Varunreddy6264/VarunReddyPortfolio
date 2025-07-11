@@ -23,9 +23,8 @@ const AboutSection = () => {
                   user-friendly.
                 </p>
                 <p className="text-lg leading-relaxed text-foreground mb-6">
-                  My journey in tech started with curiosity about how websites work, leading me through 
-                  coursework, personal projects, and internships. I'm excited to begin my professional 
-                  career and contribute to innovative software solutions.
+                Hi, I'm CHILAMKURU VARUN KUMAR REDDY, a passionate and ambitious Artificial Intelligence & Data Science graduate from Annamacharya Institute of Technology and Sciences, Tirupati. Ever since I was introduced to the power of data and intelligent systems, I’ve been deeply driven to explore how technology can solve real-world problems and make life better.
+                  As a fresher, I may not have years of industry experience, but I bring fresh ideas, a strong work ethic, and a mindset eager to learn and grow. I’m looking for a platform where I can contribute meaningfully, keep learning from industry experts, and build innovative solutions that make a difference.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   <div className="text-center p-4 bg-primary/10 rounded-lg">
@@ -58,7 +57,7 @@ const AboutSection = () => {
              <div className="absolute -top-3 -right-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium shadow-medium animate-float"> 
                  Creativity
               </div> 
-              <div className="absolute -bottom-3 -left-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium shadow-medium animate-float" style={{animationDelay: '1s'}}>
+              <div className="absolute -bottom-3 -left-2 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium shadow-medium animate-float" style={{animationDelay: '1s'}}>
                 Quick Learner
               </div>
             </div>
