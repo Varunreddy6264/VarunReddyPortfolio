@@ -3,33 +3,33 @@ import { Card, CardContent } from '@/components/ui/card';
 const SkillsSection = () => {
   const skillCategories = [
     {
-      title: 'Frontend',
+      title: 'Data Analytics & Visualization',
       skills: [
-        { name: 'React', level: 80, icon: '⚛️' },
-        { name: 'TypeScript', level: 70, icon: '📘' },
-        { name: 'Tailwind CSS', level: 80, icon: '🎨' },
-        { name: 'Bootstrap', level: 75, icon: '💜' },
-        { name: 'jQuery', level: 70, icon: '📜' },
+        { name: 'Python (Pandas, NumPy)', level: 85, icon: '🐍' },
+        { name: 'R Programming', level: 75, icon: '📊' },
+        { name: 'Tableau', level: 80, icon: '📈' },
+        { name: 'Power BI', level: 75, icon: '📉' },
+        { name: 'Excel (Advanced)', level: 90, icon: '📑' },
       ]
     },
     {
-      title: 'Programming Languages',
+      title: 'Programming & Development',
       skills: [
-        { name: 'Python', level: 75, icon: '🐍' },
+        { name: 'Python', level: 85, icon: '🐍' },
+        { name: 'SQL', level: 80, icon: '🗃️' },
+        { name: 'JavaScript', level: 75, icon: '💛' },
+        { name: 'R', level: 75, icon: '📊' },
         { name: 'Java', level: 70, icon: '☕' },
-        { name: 'JavaScript', level: 85, icon: '💛' },
-        { name: 'HTML', level: 90, icon: '🌐' },
-        { name: 'CSS', level: 85, icon: '🎨' },
       ]
     },
     {
-      title: 'Tools & Databases',
+      title: 'Tools & Technologies',
       skills: [
-        { name: 'Git & GitHub', level: 85, icon: '📁' },
-        { name: 'VS Code', level: 90, icon: '💻' },
-        { name: 'MySQL', level: 70, icon: '🗄️' },
-        { name: 'MongoDB', level: 65, icon: '🍃' },
-        { name: 'Node.js', level: 70, icon: '🟢' },
+        { name: 'Jupyter Notebooks', level: 85, icon: '📔' },
+        { name: 'Git & GitHub', level: 80, icon: '📁' },
+        { name: 'MySQL & PostgreSQL', level: 75, icon: '🗄️' },
+        { name: 'Apache Spark', level: 65, icon: '⚡' },
+        { name: 'Google Analytics', level: 70, icon: '📊' },
       ]
     }
   ];
