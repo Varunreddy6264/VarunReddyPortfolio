@@ -18,11 +18,11 @@ const AboutSection = () => {
             <Card className="gradient-card shadow-medium border-0">
               <CardContent className="p-8">
                 <p className="text-lg leading-relaxed text-foreground mb-6">
-                Hi, I'm CHILAMKURU VARUN KUMAR REDDY, a passionate and ambitious Artificial Intelligence & Data Science graduate from Annamacharya Institute of Technology and Sciences, Tirupati. Ever since I was introduced to the power of data and intelligent systems, I’ve been deeply driven to explore how technology can solve real-world problems and make life better.
+                Hi, I'm CHILAMKURU VARUN KUMAR REDDY, a passionate and ambitious Artificial Intelligence & Data Science graduate from Annamacharya Institute of Technology and Sciences, Tirupati. Ever since I was introduced to the power of data and intelligent systems, I've been deeply driven to explore how technology can solve real-world problems and make life better.
                 </p>
                 <p className="text-lg leading-relaxed text-foreground mb-6">
                 
-                  As a fresher, I may not have years of industry experience, but I bring fresh ideas, a strong work ethic, and a mindset eager to learn and grow. I’m looking for a platform where I can contribute meaningfully, keep learning from industry experts, and build innovative solutions that make a difference.
+                  As a fresher, I may not have years of industry experience, but I bring fresh ideas, a strong work ethic, and a mindset eager to learn and grow. I'm looking for a platform where I can contribute meaningfully, keep learning from industry experts, and build innovative solutions that make a difference.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   <div className="text-center p-4 bg-primary/10 rounded-lg">
@@ -43,12 +43,10 @@ const AboutSection = () => {
               <div className="w-80 h-80 rounded-full gradient-primary p-1 shadow-strong">
                 <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
                  <img 
-  src="/IMG_20231204_075604_725.jpg" 
-  alt="My Profile"
-  className="w-full h-full object-cover rounded-full"
-/>
-
-
+                   src="/Public/IMG_20231204_075604_725.jpg" 
+                   alt="My Profile"
+                   className="w-full h-full object-cover rounded-full"
+                 />
                 </div>
               </div>
               
