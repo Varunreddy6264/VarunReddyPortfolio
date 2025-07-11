@@ -18,12 +18,10 @@ const AboutSection = () => {
             <Card className="gradient-card shadow-medium border-0">
               <CardContent className="p-8">
                 <p className="text-lg leading-relaxed text-foreground mb-6">
-                  I'm a recent Computer Science graduate with a passion for full-stack development. 
-                  I love learning new technologies and turning creative ideas into functional, 
-                  user-friendly.
+                Hi, I'm CHILAMKURU VARUN KUMAR REDDY, a passionate and ambitious Artificial Intelligence & Data Science graduate from Annamacharya Institute of Technology and Sciences, Tirupati. Ever since I was introduced to the power of data and intelligent systems, I’ve been deeply driven to explore how technology can solve real-world problems and make life better.
                 </p>
                 <p className="text-lg leading-relaxed text-foreground mb-6">
-                Hi, I'm CHILAMKURU VARUN KUMAR REDDY, a passionate and ambitious Artificial Intelligence & Data Science graduate from Annamacharya Institute of Technology and Sciences, Tirupati. Ever since I was introduced to the power of data and intelligent systems, I’ve been deeply driven to explore how technology can solve real-world problems and make life better.
+                
                   As a fresher, I may not have years of industry experience, but I bring fresh ideas, a strong work ethic, and a mindset eager to learn and grow. I’m looking for a platform where I can contribute meaningfully, keep learning from industry experts, and build innovative solutions that make a difference.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mt-8">
