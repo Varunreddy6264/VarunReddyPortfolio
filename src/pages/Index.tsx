@@ -2,10 +2,10 @@ import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import SkillsSection from '@/components/SkillsSection';
-import ProjectsSection from '@/components/ProjectsSection';
+// import ProjectsSection from '@/components/ProjectsSection';
 import EducationSection from '@/components/EducationSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import ContactSection from '@/components/ContactSection';
+// import TestimonialsSection from '@/components/TestimonialsSection';
+// import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -15,10 +15,10 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
       <EducationSection />
-      <TestimonialsSection />
-      <ContactSection />
+      {/* <TestimonialsSection /> */}
+      {/* <ContactSection /> */}
       <Footer />
     </div>
   );
