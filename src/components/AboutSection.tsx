@@ -9,7 +9,7 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Passionate about creating innovative solutions and bringing ideas to life through 
+            Passionate about creating innovative solutions and bringing ideas to life through code
           </p>
         </div>
 
@@ -56,7 +56,7 @@ const AboutSection = () => {
              <div className="absolute -top-3 -right-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium shadow-medium animate-float"> 
                  Creativity
               </div> 
-              <div className="absolute -bottom-2 -left-4 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium shadow-medium animate-float" style={{animationDelay: '1s'}}>
+              <div className="absolute -bottom-2 -left-9 bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium shadow-medium animate-float" style={{animationDelay: '1s'}}>
                 Quick Learner
               </div>
             </div>
