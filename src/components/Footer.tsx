@@ -123,7 +123,7 @@ const Footer = () => {
               <span className="text-sm bg-accent/10 text-accent px-2 py-1 rounded">TypeScript</span>
               <span className="text-sm bg-success/10 text-success px-2 py-1 rounded">Tailwind</span>
             </div>
-          </div>*/)
+          </div> */}
 
           <Button
             variant="ghost"
