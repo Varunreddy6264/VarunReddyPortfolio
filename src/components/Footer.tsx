@@ -56,8 +56,8 @@ const Footer = () => {
               Chilamkuru Varun Kumar Reddy
             </h3>
             <p className="text-muted-foreground mb-6 max-w-md">
-              Full Stack Developer passionate about creating innovative digital solutions. 
-              Always excited to take on new challenges and collaborate with amazing teams.
+             Enthusiastic data analytics fresher with hands-on experience in Python, SQL, and Tableau.
+             Quick learner with a passion for solving real-world problems using data.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -116,14 +116,14 @@ const Footer = () => {
             © {currentYear} Chilamkuru Varun Kumar Reddy. All rights reserved.
           </p>
           
-          <div className="flex items-center space-x-4 mt-4 md:mt-0">
+          {/* <div className="flex items-center space-x-4 mt-4 md:mt-0">
             <span className="text-sm text-muted-foreground">Built with</span>
             <div className="flex items-center space-x-2">
               <span className="text-sm bg-primary/10 text-primary px-2 py-1 rounded">React</span>
               <span className="text-sm bg-accent/10 text-accent px-2 py-1 rounded">TypeScript</span>
               <span className="text-sm bg-success/10 text-success px-2 py-1 rounded">Tailwind</span>
             </div>
-          </div>
+          </div>*/)
 
           <Button
             variant="ghost"
