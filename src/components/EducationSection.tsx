@@ -32,14 +32,15 @@ const EducationSection = () => {
     {
       name: 'AWS Cloud Practitioner Exam',
       issuer: 'Geeks for Geeks ',
-      date: '2024'
+      date: '2024',
+      credentialID:'bd7ed4b2f19f2090a5cfe0cdbdf1825c'
     },
-    {/*
-      name: 'MongoDB Certified Developer',
-      issuer: 'MongoDB University',
-      date: '2021',
-      credentialId: 'MDB-DEV-2021'
-    */}
+    {
+      name: 'Data Analytics Intern',
+      issuer: 'Codec Technologies Pvt. Ltd.',
+      date: '2024',
+      credentialId: 'E19E86-0116588288923'
+    }
   ];
 
   return (
