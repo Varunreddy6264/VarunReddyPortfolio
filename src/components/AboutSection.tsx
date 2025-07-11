@@ -9,7 +9,7 @@ const AboutSection = () => {
             About Me
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Passionate about creating innovative solutions and bringing ideas to life through code
+            Passionate about creating innovative solutions and bringing ideas to life through 
           </p>
         </div>
 
