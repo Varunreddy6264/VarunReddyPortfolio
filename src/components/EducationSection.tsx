@@ -8,7 +8,11 @@ const EducationSection = () => {
       period: '2022 - 2026',
       gpa: '7.3/10',
       description: 'Focused on Data Analytics,Excel,Power BI',
-      
+      highlights: [
+        'Strong foundation in AI and Machine Learning concepts',
+        'Hands-on experience with data visualization tools',
+        'Active participation in technical workshops'
+      ]
     }
   ];
 
