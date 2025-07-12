@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +20,19 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
+      // Save message to database
+      const { error: dbError } = await supabase
+        .from('contact_messages')
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          status: 'unread'
+        }]);
+
+      if (dbError) throw dbError;
+
+      // Also send email notification (optional)
       const response = await fetch(
         'https://tnitdhmiqmedptaifzts.supabase.co/functions/v1/send-contact-email',
         {
@@ -29,10 +43,6 @@ const ContactSection = () => {
           body: JSON.stringify(formData),
         }
       );
-
-      if (!response.ok) {
-        throw new Error('Failed to send message');
-      }
 
       toast({
         title: "Message sent successfully!",
