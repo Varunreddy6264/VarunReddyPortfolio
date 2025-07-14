@@ -40,7 +40,13 @@ const EducationSection = () => {
       issuer: 'Codec Technologies Pvt. Ltd.',
       date: '2024',
       credentialId: 'E19E86-0116588288923'
-    }
+    },
+    {
+      name:"GenAI Powered Data Analytics Job Simulation",
+      issuer:"The Forage",
+      date:'2024',
+      "User Verification Code": 'et8ysDkvhpx2vWD3W'
+        }
   ];
 
   return (
@@ -113,7 +119,7 @@ const EducationSection = () => {
                         <h4 className="font-heading font-semibold mb-1">{cert.name}</h4>
                         <p className="text-sm text-accent">{cert.issuer}</p>
                         <p className="text-xs text-muted-foreground mt-1">
-                          ID: {cert.credentialId}
+                          ID: {cert.credentialId  || cert["User Verification Code"]}
                         </p>
                       </div>
                       <div className="text-right">
