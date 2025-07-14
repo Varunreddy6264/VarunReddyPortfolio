@@ -1,4 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
+import genaiCert from '@/assets/certificates/genai-job-sim.png';
+import dataAnalyticsCert from '@/assets/certificates/data-analytics-sim.png';
+import quantitativeResearchCert from '@/assets/certificates/quantitative-research-sim.png';
 
 const EducationSection = () => {
   const education = [
@@ -46,21 +49,21 @@ const EducationSection = () => {
       issuer: 'The Forage',
       date: '2024',
       'User Verification Code': 'et8ysDkvhpx2vWD3W',
-      imageUrl: '/certificates/genai-job-sim.png',
+      imageUrl: genaiCert,
     },
     {
       name: 'Data Analytics Job Simulation',
       issuer: 'The Forage',
       date: '2024',
       'User Verification Code': 'et8ysDkvhpx2vWD3W',
-      imageUrl: '/certificates/data-analytics-sim.png',
+      imageUrl: dataAnalyticsCert,
     },
     {
       name: 'Quantitative Research Job Simulation',
       issuer: 'The Forage',
       date: '2024',
       'User Verification Code': 'et8ysDkvhpx2vWD3W',
-      imageUrl: '/certificates/quantitative-research-sim.png',
+      imageUrl: quantitativeResearchCert,
     },
   ];
 
