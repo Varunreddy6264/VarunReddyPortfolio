@@ -58,6 +58,7 @@ const EducationSection = () => {
       issuer:"The Forage",
       date:'2024',
       "User Verification Code": 'et8ysDkvhpx2vWD3W'
+    }
     
   ];
 
