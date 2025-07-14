@@ -46,7 +46,19 @@ const EducationSection = () => {
       issuer:"The Forage",
       date:'2024',
       "User Verification Code": 'et8ysDkvhpx2vWD3W'
-        }
+        },
+    {
+       name:"Data Analytics Job Simulation",
+      issuer:"The Forage",
+      date:'2024',
+      "User Verification Code": 'et8ysDkvhpx2vWD3W'
+    },
+    {
+       name:"Quantitative Research Job Simulation",
+      issuer:"The Forage",
+      date:'2024',
+      "User Verification Code": 'et8ysDkvhpx2vWD3W'
+    
   ];
 
   return (
