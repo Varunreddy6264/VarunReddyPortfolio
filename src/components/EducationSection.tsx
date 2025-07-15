@@ -2,6 +2,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import genaiCert from '@/assets/certificates/genai-job-sim.png';
 import dataAnalyticsCert from '@/assets/certificates/data-analytics-sim.png';
 import quantitativeResearchCert from '@/assets/certificates/quantitative-research-sim.png';
+import htmltraining from '@/asserts/certificates/html.jpg';
+import ctraining from '@/asserts/certificates/c training.jpg';
+import awscloud from '@/asserts/certificates/aws.jpg';
 
 const EducationSection = () => {
   const education = [
@@ -25,18 +28,21 @@ const EducationSection = () => {
       issuer: 'Spoken Tutorial Project at IIT Bombay',
       date: '2023',
       credentialId: '3480823U4G',
+      imageUrl:htmltraining,
     },
     {
       name: 'C Training',
       issuer: 'Spoken Tutorial Project at IIT Bombay',
       date: '2023',
       credentialId: '34808234N4',
+      imageUrl:ctraining,
     },
     {
       name: 'AWS Cloud Practitioner Exam',
       issuer: 'Geeks for Geeks',
       date: '2024',
       credentialId: 'bd7ed4b2f19f2090a5cfe0cdbdf1825c',
+      imageUrl:awscloud,
     },
     {
       name: 'Data Analytics Intern',
