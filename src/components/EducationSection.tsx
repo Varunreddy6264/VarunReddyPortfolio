@@ -2,9 +2,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import genaiCert from '@/assets/certificates/genai-job-sim.png';
 import dataAnalyticsCert from '@/assets/certificates/data-analytics-sim.png';
 import quantitativeResearchCert from '@/assets/certificates/quantitative-research-sim.png';
-import htmltraining from '@/asserts/certificates/html.jpg';
-import ctraining from '@/asserts/certificates/c training.jpg';
-import awscloud from '@/asserts/certificates/aws.jpg';
+import htmltraining from '@/assets/certificates/html.jpg';
+import ctraining from '@/assets/certificates/c training.jpg';
+import awscloud from '@/assets/certificates/aws.jpg';
 
 const EducationSection = () => {
   const education = [
