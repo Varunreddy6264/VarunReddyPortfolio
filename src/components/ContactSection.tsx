@@ -98,7 +98,7 @@ const ContactSection = () => {
         </svg>
       ),
       label: 'LinkedIn',
-      value: 'linkedin.com',
+      value: 'Linkedin.com',
       link: 'https://www.linkedin.com/in/chilamkuru-varun-kumar-reddy-600802371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
     },
     {
@@ -108,7 +108,7 @@ const ContactSection = () => {
         </svg>
       ),
       label: 'GitHub',
-      value: 'github.com',
+      value: 'Github.com',
       link: 'https://github.com/Varunreddy6264'
     },
      {
@@ -118,7 +118,7 @@ const ContactSection = () => {
       </svg>
     ),
     label: 'Credly',
-    value: 'credly.com',
+    value: 'Credly.com',
     link: 'https://www.credly.com/earner/dashboard'
   }
     
