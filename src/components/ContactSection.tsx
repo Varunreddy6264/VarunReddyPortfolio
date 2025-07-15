@@ -110,7 +110,18 @@ const ContactSection = () => {
       label: 'GitHub',
       value: 'github.com',
       link: 'https://github.com/Varunreddy6264'
-    }
+    },
+     {
+    icon: (
+      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 32 32">
+        <path d="M16 0a16 16 0 1016 16A16.017 16.017 0 0016 0zm.015 5.63a3.757 3.757 0 110 7.515 3.757 3.757 0 010-7.515zM23.485 25.27h-2.683v-5.682c0-1.353-.024-3.09-1.882-3.09-1.884 0-2.173 1.471-2.173 2.993v5.78H14.06V13.23h2.575v1.646h.036a2.825 2.825 0 012.543-1.395c2.716 0 3.22 1.788 3.22 4.113v7.676z"/>
+      </svg>
+    ),
+    label: 'Credly',
+    value: 'credly.com',
+    link: 'https://www.credly.com/earner/dashboard'
+  }
+    
   ];
 
   return (
