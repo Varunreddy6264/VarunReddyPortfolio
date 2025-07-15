@@ -8,16 +8,15 @@ const SkillsSection = () => {
         { name: 'Python (Pandas, NumPy)', level: 80, icon: '🐍' },
         { name: 'R Programming', level: 70, icon: '📊' },
         { name: 'Tableau', level: 75, icon: '📈' },
-        { name: 'Power BI', level: 80, icon: '📉' },
-        { name: 'Excel ', level: 85, icon: '📑' },
+        { name: 'Power BI', level: 70, icon: '📉' },
+        { name: 'Excel ', level: 75, icon: '📑' },
       ]
     },
     {
       title: 'Programming & Development',
       skills: [
-        { name: 'Python', level: 85, icon: '🐍' },
+        { name: 'Python', level: 80, icon: '🐍' },
         { name: 'SQL', level: 70, icon: '🗃️' },
-        { name: 'JavaScript', level: 70, icon: '💛' },
         { name: 'R', level: 75, icon: '📊' },
         { name: 'Java', level: 70, icon: '☕' },
       ]
@@ -27,9 +26,8 @@ const SkillsSection = () => {
       skills: [
         { name: 'Jupyter Notebooks', level: 85, icon: '📔' },
         { name: 'Git & GitHub', level: 80, icon: '📁' },
-        { name: 'MySQL & PostgreSQL', level: 75, icon: '🗄️' },
-        { name: 'Apache Spark', level: 65, icon: '⚡' },
-        { name: 'Google Analytics', level: 70, icon: '📊' },
+        { name: 'MySQL ', level: 75, icon: '🗄️' },
+        
       ]
     }
   ];
