@@ -5,6 +5,7 @@ import quantitativeResearchCert from '@/assets/certificates/quantitative-researc
 import htmltraining from '@/assets/certificates/html.jpg';
 import ctraining from '@/assets/certificates/aws.jpg';
 import awscloud from '@/assets/certificates/c training.jpg';
+import apsche from '@/assets/certificates/1.png;
 
 const EducationSection = () => {
   const education = [
@@ -71,6 +72,14 @@ const EducationSection = () => {
       'User Verification Code': 'et8ysDkvhpx2vWD3W',
       imageUrl: quantitativeResearchCert,
     },
+        {
+      name: 'Data Analytics with Tableau ',
+      issuer: 'APSCHE',
+      date: '2024',
+      'User Verification Code': 'et8ysDkvhpx2vWD3W',
+      imageUrl: apsche,
+    },
+    
   ];
 
   return (
