@@ -5,7 +5,7 @@ import quantitativeResearchCert from '@/assets/certificates/quantitative-researc
 import htmltraining from '@/assets/certificates/html.jpg';
 import ctraining from '@/assets/certificates/aws.jpg';
 import awscloud from '@/assets/certificates/c training.jpg';
-import apsche from '@/assets/certificates/1.png;
+import apsche from '@/assets/certificates/1.png';
 
 const EducationSection = () => {
   const education = [
