@@ -76,7 +76,7 @@ const EducationSection = () => {
       name: 'Data Analytics with Tableau ',
       issuer: 'APSCHE',
       date: '2024',
-      'User Verification Code': 'et8ysDkvhpx2vWD3W',
+      'User Verification Code': 'EXT-APSCHE_DA-54583',
       imageUrl: apsche,
     },
     
