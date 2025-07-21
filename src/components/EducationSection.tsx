@@ -74,7 +74,7 @@ const EducationSection = () => {
     },
         {
       name: 'Data Analytics with Tableau ',
-      issuer: 'APSCHE',
+      issuer: 'SmartBridge Educational Services Pvt. Ltd',
       date: '2024',
       'User Verification Code': 'EXT-APSCHE_DA-54583',
       imageUrl: apsche,
