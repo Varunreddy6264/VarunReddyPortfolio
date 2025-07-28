@@ -13,7 +13,6 @@ const EducationSection = () => {
       degree: 'Bachelor of Science in Artificial Intelligence and Data Science',
       institution: 'Annamacharya Tnstitute of Technology and Sciences, Tirupati',
       period: '2022 - 2026',
-      gpa: '7.3/10',
       description: 'Focused on Data Analytics, Excel, Power BI',
       highlights: [
         'Strong foundation in AI and Machine Learning concepts',
