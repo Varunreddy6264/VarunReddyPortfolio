@@ -111,7 +111,7 @@ const EducationSection = () => {
                       <span className="text-sm text-primary font-medium bg-primary/10 px-3 py-1 rounded-full">
                         {edu.period}
                       </span>
-                      <p className="text-sm text-muted-foreground mt-2">GPA: {edu.gpa}</p>
+                      
                     </div>
                   </div>
 
