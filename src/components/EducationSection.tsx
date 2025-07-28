@@ -11,7 +11,7 @@ const EducationSection = () => {
   const education = [
     {
       degree: 'Bachelor of Science in Artificial Intelligence and Data Science',
-      institution: 'Annamacharya Tnstitute of Technology and Sciences, Tirupati',
+      institution: 'Annamacharya Institute of Technology and Sciences, Tirupati',
       period: '2022 - 2026',
       description: 'Focused on Data Analytics, Excel, Power BI',
       highlights: [
