@@ -189,7 +189,7 @@ const ContactSection = () => {
                     </p>
                   </div>
                   <a
-                    href="/resume/Varun_Reddy_Resume.pdf"
+                    href="/resume/Varun(2).pdf"
                     download
                   >
                     <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
