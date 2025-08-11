@@ -137,8 +137,8 @@ const ContactSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <Card className="gradient-card shadow-medium border-0">
+          {/* Contact Form */} 
+          {/*<Card className="gradient-card shadow-medium border-0">  
             <CardContent className="p-8">
               <h3 className="text-2xl font-heading font-semibold mb-6">Send a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -199,7 +199,7 @@ const ContactSection = () => {
                 </Button>
               </form>
             </CardContent>
-          </Card>
+          </Card> */}
 
           {/* Contact Information */}
           <div>
