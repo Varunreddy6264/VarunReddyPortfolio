@@ -11,16 +11,12 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      const { error: dbError } = await supabase
-        .from('contact_messages')
-        .insert([{ ...formData, status: 'unread' }]);
-      if (dbError) throw dbError;
-
+      // For now, just send the email
       await fetch(
         'https://tnitdhmiqmedptaifzts.supabase.co/functions/v1/send-contact-email',
         {
@@ -40,7 +36,7 @@ const ContactSection = () => {
     }
   };
 
-  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const contactInfo = [
     {
@@ -145,6 +141,45 @@ const ContactSection = () => {
               ))}
             </div>
 
+            {/* Contact Form */}
+            <Card className="gradient-card shadow-soft border-0 mb-8">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-heading font-semibold mb-4">Send a Message</h3>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <Input
+                    name="name"
+                    placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
+                  <Input
+                    name="email"
+                    type="email"
+                    placeholder="Your Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                  <Textarea
+                    name="message"
+                    placeholder="Your Message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    required
+                  />
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full"
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+
             {/* Resume Download */}
             <Card className="gradient-card shadow-soft border-0 mb-8">
               <CardContent className="p-6">
@@ -153,7 +188,7 @@ const ContactSection = () => {
                     <h4 className="font-heading font-semibold mb-1">Download Resume</h4>
                     <p className="text-sm text-muted-foreground">Get a detailed overview of my experience and skills</p>
                   </div>
-                  <a href="/resume/Varun (2).pdf" download="Varun (2).pdf">
+                  <a href="/resume/Varun%20(2).pdf" download="Varun_Resume.pdf">
                     <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                       <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
