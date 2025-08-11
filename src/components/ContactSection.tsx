@@ -15,7 +15,7 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -32,14 +32,12 @@ const ContactSection = () => {
 
       if (dbError) throw dbError;
 
-      // Also send email notification (optional)
-      const response = await fetch(
+      // Also send email notification
+      await fetch(
         'https://tnitdhmiqmedptaifzts.supabase.co/functions/v1/send-contact-email',
         {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData),
         }
       );
@@ -62,7 +60,7 @@ const ContactSection = () => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -111,17 +109,16 @@ const ContactSection = () => {
       value: 'Github.com',
       link: 'https://github.com/Varunreddy6264'
     },
-     {
-    icon: (
-      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 32 32">
-        <path d="M16 0a16 16 0 1016 16A16.017 16.017 0 0016 0zm.015 5.63a3.757 3.757 0 110 7.515 3.757 3.757 0 010-7.515zM23.485 25.27h-2.683v-5.682c0-1.353-.024-3.09-1.882-3.09-1.884 0-2.173 1.471-2.173 2.993v5.78H14.06V13.23h2.575v1.646h.036a2.825 2.825 0 012.543-1.395c2.716 0 3.22 1.788 3.22 4.113v7.676z"/>
-      </svg>
-    ),
-    label: 'Credly',
-    value: 'Credly.com',
-    link: 'https://www.credly.com/earner/dashboard'
-  }
-    
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 32 32">
+          <path d="M16 0a16 16 0 1016 16A16.017 16.017 0 0016 0zm.015 5.63a3.757 3.757 0 110 7.515 3.757 3.757 0 010-7.515zM23.485 25.27h-2.683v-5.682c0-1.353-.024-3.09-1.882-3.09-1.884 0-2.173 1.471-2.173 2.993v5.78H14.06V13.23h2.575v1.646h.036a2.825 2.825 0 012.543-1.395c2.716 0 3.22 1.788 3.22 4.113v7.676z"/>
+        </svg>
+      ),
+      label: 'Credly',
+      value: 'Credly.com',
+      link: 'https://www.credly.com/earner/dashboard'
+    }
   ];
 
   return (
@@ -137,75 +134,11 @@ const ContactSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */} 
-          {/*<Card className="gradient-card shadow-medium border-0">  
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-heading font-semibold mb-6">Send a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Your Name
-                  </label>
-                  <Input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email Address
-                  </label>
-                  <Input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full resize-none"
-                    placeholder="Tell me about your project or say hello..."
-                  />
-                </div>
-
-                <Button 
-                  type="submit" 
-                  disabled={isSubmitting}
-                  className="w-full gradient-primary text-primary-foreground shadow-medium hover:shadow-strong transition-all duration-300"
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </Button>
-              </form>
-            </CardContent>
-          </Card> */}
-
-          {/* Contact Information */}
+          {/* LEFT COLUMN - First 3 items */}
           <div>
             <h3 className="text-2xl font-heading font-semibold mb-8">Get In Touch</h3>
             <div className="space-y-6 mb-8">
-              {contactInfo.map((info) => (
+              {contactInfo.slice(0, 3).map((info) => (
                 <div key={info.label} className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
                     {info.icon}
@@ -213,12 +146,30 @@ const ContactSection = () => {
                   <div>
                     <div className="text-sm text-muted-foreground">{info.label}</div>
                     {info.link ? (
-                      <a 
-                        href={info.link}
-                        className="font-medium hover:text-primary transition-colors duration-200"
-                        target={info.link.startsWith('http') ? '_blank' : undefined}
-                        rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      >
+                      <a href={info.link} className="font-medium hover:text-primary transition-colors duration-200" target="_blank" rel="noopener noreferrer">
+                        {info.value}
+                      </a>
+                    ) : (
+                      <div className="font-medium">{info.value}</div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN - Remaining items + Resume + Response Time */}
+          <div>
+            <div className="space-y-6 mb-8">
+              {contactInfo.slice(3).map((info) => (
+                <div key={info.label} className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+                    {info.icon}
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground">{info.label}</div>
+                    {info.link ? (
+                      <a href={info.link} className="font-medium hover:text-primary transition-colors duration-200" target="_blank" rel="noopener noreferrer">
                         {info.value}
                       </a>
                     ) : (
@@ -230,7 +181,7 @@ const ContactSection = () => {
             </div>
 
             {/* Resume Download */}
-            <Card className="gradient-card shadow-soft border-0">
+            <Card className="gradient-card shadow-soft border-0 mb-8">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -239,10 +190,7 @@ const ContactSection = () => {
                       Get a detailed overview of my experience and skills
                     </p>
                   </div>
-                  <Button 
-                    variant="outline"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  >
+                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                     <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
