@@ -7,11 +7,7 @@ import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
@@ -22,13 +18,7 @@ const ContactSection = () => {
     try {
       const { error: dbError } = await supabase
         .from('contact_messages')
-        .insert([{
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          status: 'unread'
-        }]);
-
+        .insert([{ ...formData, status: 'unread' }]);
       if (dbError) throw dbError;
 
       await fetch(
@@ -40,30 +30,17 @@ const ContactSection = () => {
         }
       );
 
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-
+      toast({ title: 'Message sent successfully!', description: "Thank you for reaching out. I'll get back to you soon." });
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       console.error('Error sending message:', error);
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
+      toast({ title: 'Error', description: 'Failed to send message. Please try again.', variant: 'destructive' });
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const contactInfo = [
     {
@@ -84,7 +61,7 @@ const ContactSection = () => {
       ),
       label: 'LinkedIn',
       value: 'Linkedin.com',
-      link: 'https://www.linkedin.com/in/chilamkuru-varun-kumar-reddy-600802371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+      link: 'https://www.linkedin.com/in/chilamkuru-varun-kumar-reddy-600802371'
     },
     {
       icon: (
@@ -123,30 +100,24 @@ const ContactSection = () => {
     <section id="contact" className="section-padding bg-secondary/30">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-heading font-bold mb-4 text-gradient">
-            Let's Work Together
-          </h2>
+          <h2 className="text-4xl font-heading font-bold mb-4 text-gradient">Let's Work Together</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Have a project in mind or want to discuss opportunities? I'd love to hear from you.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* LEFT COLUMN - First 3 items */}
+          {/* LEFT COLUMN */}
           <div>
             <h3 className="text-2xl font-heading font-semibold mb-8">Get In Touch</h3>
             <div className="space-y-6 mb-8">
               {contactInfo.slice(0, 3).map((info) => (
                 <div key={info.label} className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
-                    {info.icon}
-                  </div>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">{info.icon}</div>
                   <div>
                     <div className="text-sm text-muted-foreground">{info.label}</div>
                     {info.link ? (
-                      <a href={info.link} className="font-medium hover:text-primary transition-colors duration-200" target="_blank" rel="noopener noreferrer">
-                        {info.value}
-                      </a>
+                      <a href={info.link} className="font-medium hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">{info.value}</a>
                     ) : (
                       <div className="font-medium">{info.value}</div>
                     )}
@@ -156,20 +127,16 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* RIGHT COLUMN - Remaining items + Resume + Response Time */}
+          {/* RIGHT COLUMN */}
           <div>
             <div className="space-y-6 mb-8">
               {contactInfo.slice(3).map((info) => (
                 <div key={info.label} className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
-                    {info.icon}
-                  </div>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">{info.icon}</div>
                   <div>
                     <div className="text-sm text-muted-foreground">{info.label}</div>
                     {info.link ? (
-                      <a href={info.link} className="font-medium hover:text-primary transition-colors duration-200" target="_blank" rel="noopener noreferrer">
-                        {info.value}
-                      </a>
+                      <a href={info.link} className="font-medium hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">{info.value}</a>
                     ) : (
                       <div className="font-medium">{info.value}</div>
                     )}
@@ -184,14 +151,9 @@ const ContactSection = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <h4 className="font-heading font-semibold mb-1">Download Resume</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Get a detailed overview of my experience and skills
-                    </p>
+                    <p className="text-sm text-muted-foreground">Get a detailed overview of my experience and skills</p>
                   </div>
-                  <a
-                    href="/resume/Varun(2).pdf"
-                    download
-                  >
+                  <a href="/resume/Varun (2).pdf" download="Varun (2).pdf">
                     <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                       <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -213,9 +175,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="font-medium text-success">Quick Response</div>
-                  <div className="text-sm text-muted-foreground">
-                    I typically respond within 24 hours
-                  </div>
+                  <div className="text-sm text-muted-foreground">I typically respond within 24 hours</div>
                 </div>
               </div>
             </div>
