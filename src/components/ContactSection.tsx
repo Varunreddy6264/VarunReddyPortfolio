@@ -78,17 +78,7 @@ const ContactSection = () => {
       value: 'varunreddy7456@gmail.com',
       link: 'mailto:varunreddy7456@gmail.com'
     },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      ),
-      label: 'Location',
-      value: 'Kadapa, Andhra Pradesh',
-      link: null
-    },
+  
     {
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -98,6 +88,17 @@ const ContactSection = () => {
       label: 'LinkedIn',
       value: 'Linkedin.com',
       link: 'https://www.linkedin.com/in/chilamkuru-varun-kumar-reddy-600802371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+    },
+      {
+      icon: (
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      ),
+      label: 'Location',
+      value: 'Kadapa, Andhra Pradesh',
+      link: null
     },
     {
       icon: (
