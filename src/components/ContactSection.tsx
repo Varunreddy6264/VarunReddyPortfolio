@@ -16,7 +16,6 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // For now, just send the email
       await fetch(
         'https://tnitdhmiqmedptaifzts.supabase.co/functions/v1/send-contact-email',
         {
@@ -26,17 +25,30 @@ const ContactSection = () => {
         }
       );
 
-      toast({ title: 'Message sent successfully!', description: "Thank you for reaching out. I'll get back to you soon." });
+      toast({
+        title: 'Message sent successfully!',
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       console.error('Error sending message:', error);
-      toast({ title: 'Error', description: 'Failed to send message. Please try again.', variant: 'destructive' });
+      toast({
+        title: 'Error',
+        description: 'Failed to send message. Please try again.',
+        variant: 'destructive',
+      });
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) =>
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
 
   const contactInfo = [
     {
@@ -47,7 +59,7 @@ const ContactSection = () => {
       ),
       label: 'Email',
       value: 'varunreddy7456@gmail.com',
-      link: 'mailto:varunreddy7456@gmail.com'
+      link: 'mailto:varunreddy7456@gmail.com',
     },
     {
       icon: (
@@ -57,7 +69,7 @@ const ContactSection = () => {
       ),
       label: 'LinkedIn',
       value: 'Linkedin.com',
-      link: 'https://www.linkedin.com/in/chilamkuru-varun-kumar-reddy-600802371'
+      link: 'https://www.linkedin.com/in/chilamkuru-varun-kumar-reddy-600802371',
     },
     {
       icon: (
@@ -68,7 +80,7 @@ const ContactSection = () => {
       ),
       label: 'Location',
       value: 'Kadapa, Andhra Pradesh',
-      link: null
+      link: null,
     },
     {
       icon: (
@@ -78,7 +90,7 @@ const ContactSection = () => {
       ),
       label: 'GitHub',
       value: 'Github.com',
-      link: 'https://github.com/Varunreddy6264'
+      link: 'https://github.com/Varunreddy6264',
     },
     {
       icon: (
@@ -88,8 +100,8 @@ const ContactSection = () => {
       ),
       label: 'Credly',
       value: 'Credly.com',
-      link: 'https://www.credly.com/earner/dashboard'
-    }
+      link: 'https://www.credly.com/earner/dashboard',
+    },
   ];
 
   return (
@@ -109,11 +121,15 @@ const ContactSection = () => {
             <div className="space-y-6 mb-8">
               {contactInfo.slice(0, 3).map((info) => (
                 <div key={info.label} className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">{info.icon}</div>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+                    {info.icon}
+                  </div>
                   <div>
                     <div className="text-sm text-muted-foreground">{info.label}</div>
                     {info.link ? (
-                      <a href={info.link} className="font-medium hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">{info.value}</a>
+                      <a href={info.link} className="font-medium hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
+                        {info.value}
+                      </a>
                     ) : (
                       <div className="font-medium">{info.value}</div>
                     )}
@@ -128,11 +144,15 @@ const ContactSection = () => {
             <div className="space-y-6 mb-8">
               {contactInfo.slice(3).map((info) => (
                 <div key={info.label} className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">{info.icon}</div>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+                    {info.icon}
+                  </div>
                   <div>
                     <div className="text-sm text-muted-foreground">{info.label}</div>
                     {info.link ? (
-                      <a href={info.link} className="font-medium hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">{info.value}</a>
+                      <a href={info.link} className="font-medium hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
+                        {info.value}
+                      </a>
                     ) : (
                       <div className="font-medium">{info.value}</div>
                     )}
@@ -169,11 +189,7 @@ const ContactSection = () => {
                     rows={4}
                     required
                   />
-                  <Button 
-                    type="submit" 
-                    disabled={isSubmitting}
-                    className="w-full"
-                  >
+                  <Button type="submit" disabled={isSubmitting} className="w-full">
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                 </form>
@@ -186,9 +202,11 @@ const ContactSection = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <h4 className="font-heading font-semibold mb-1">Download Resume</h4>
-                    <p className="text-sm text-muted-foreground">Get a detailed overview of my experience and skills</p>
+                    <p className="text-sm text-muted-foreground">
+                      Get a detailed overview of my experience and skills
+                    </p>
                   </div>
-                  <a href="/resume/Varun%20(2).pdf" download="Varun_Resume.pdf">
+                  <a href="/resume/Varun_Resume.pdf" download>
                     <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                       <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -210,7 +228,9 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="font-medium text-success">Quick Response</div>
-                  <div className="text-sm text-muted-foreground">I typically respond within 24 hours</div>
+                  <div className="text-sm text-muted-foreground">
+                    I typically respond within 24 hours
+                  </div>
                 </div>
               </div>
             </div>
