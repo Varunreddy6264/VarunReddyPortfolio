@@ -206,10 +206,10 @@ const ContactSection = () => {
                       Take a look at my resume in image format
                     </p>
                   </div>
-                  <a href="public/resume/Varun_Resume_page-0001.jpg" target="_blank" rel="noopener noreferrer">
+                  <a href="/resume/Varun_Resume_page-0001.jpg" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                       <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-4.553a1 1 0 00-1.414-1.414L13.586 8H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2v-7a1 1 0 10-2 0v6H5v-9h8a1 1 0 001-1z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-4.553a1 1 0 00-1.414-1.414L13.586 8H5a2 2 0 00-2 2v9a2 2 0 002 2v-7a1 1 0 10-2 0v6H5v-9h8a1 1 0 001-1z" />
                       </svg>
                       View Resume
                     </Button>
