@@ -196,22 +196,22 @@ const ContactSection = () => {
               </CardContent>
             </Card>
 
-            {/* Resume Download */}
+            {/* Resume View */}
             <Card className="gradient-card shadow-soft border-0 mb-8">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="font-heading font-semibold mb-1">Download Resume</h4>
+                    <h4 className="font-heading font-semibold mb-1">View Resume</h4>
                     <p className="text-sm text-muted-foreground">
-                      Get a detailed overview of my experience and skills
+                      Take a look at my resume in image format
                     </p>
                   </div>
-                  <a href="/resume/Varun_Resume.pdf" download>Resume</a>
+                  <a href="/resume/Varun_Resume.png" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                       <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-4.553a1 1 0 00-1.414-1.414L13.586 8H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2v-7a1 1 0 10-2 0v6H5v-9h8a1 1 0 001-1z" />
                       </svg>
-                      Resume
+                      View Resume
                     </Button>
                   </a>
                 </div>
