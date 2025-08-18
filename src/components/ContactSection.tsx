@@ -209,9 +209,9 @@ const ContactSection = () => {
                   </div>
                   <a href="/resume/Varun_Resume.pdf" target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); window.open('/resume/Varun_Resume.pdf', '_blank'); }}>
                     <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                      <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      {/* <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-4.553a1 1 0 00-1.414-1.414L13.586 8H5a2 2 0 00-2 2v9a2 2 0 002 2v-7a1 1 0 10-2 0v6H5v-9h8a1 1 0 001-1z" />
-                      </svg>
+                      </svg> */}
                       View Resume
                     </Button>
                   </a>
@@ -223,9 +223,9 @@ const ContactSection = () => {
             <div className="mt-8 p-6 bg-success/10 rounded-lg border border-success/20">
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-success/20 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  {/* <svg className="w-4 h-4 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+                  </svg> */}
                 </div>
                 <div>
                   <div className="font-medium text-success">Quick Response</div>
