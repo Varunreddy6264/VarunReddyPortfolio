@@ -19,7 +19,7 @@ const AboutSection = () => {
             <Card className="gradient-card shadow-medium border-0">
               <CardContent className="p-8">
                 <p className="text-lg leading-relaxed text-foreground mb-6">
-                Hi, I'm CHILAMKURU VARUN KUMAR REDDY, a passionate and ambitious Artificial Intelligence & Data Science graduate from Annamacharya Institute of Technology and Sciences, Tirupati. Ever since I was introduced to the power of data and intelligent systems, I've been deeply driven to explore how technology can solve real-world problems and make life better.
+                Hi, I'm VARUN REDDY, a passionate and ambitious Artificial Intelligence & Data Science graduate from Annamacharya Institute of Technology and Sciences, Tirupati. Ever since I was introduced to the power of data and intelligent systems, I've been deeply driven to explore how technology can solve real-world problems and make life better.
                 </p>
                 <p className="text-lg leading-relaxed text-foreground mb-6">
                 
